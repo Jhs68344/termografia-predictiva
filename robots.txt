@@ -1,1 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://termografiapredictiva.github.io/sitemap.xml
 
