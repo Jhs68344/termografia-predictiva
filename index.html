@@ -1,287 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Termografía Predictiva | Termografía Eléctrica Industrial</title>
-<meta name="description" content="Servicio profesional de termografía eléctrica para mantenimiento predictivo. Detección de puntos calientes en tableros, transformadores y sistemas industriales." />
-<meta name="robots" content="index,follow" />
-<link rel="canonical" href="https://termografiapredictiva.github.io/" />
+    <!-- SEO TITLE -->
+    <title>Termografía Industrial en Colombia | Inspección Eléctrica en Bogotá</title>
 
-<style>
-:root{
-  --bg:#071018;
-  --card:rgba(255,255,255,.05);
-  --border:rgba(255,255,255,.12);
-  --text:#f1f5f9;
-  --muted:#94a3b8;
-  --accent1:#ff7a18;
-  --accent2:#00d4ff;
-  --radius:18px;
-}
+    <!-- META DESCRIPTION -->
+    <meta name="description" content="Servicios profesionales de termografía industrial en Colombia. Especialistas en inspección eléctrica en Bogotá para mantenimiento predictivo y detección temprana de fallas eléctricas.">
 
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:system-ui,-apple-system,Segoe UI,Roboto;
-  background:linear-gradient(180deg,#050c14,#0b1b2a);
-  color:var(--text);
-}
+    <meta name="keywords" content="termografía industrial Colombia, inspección eléctrica Bogotá, mantenimiento predictivo, análisis térmico industrial">
 
-.container{max-width:1200px;margin:auto;padding:0 20px}
+    <meta name="author" content="Termografía Predictiva">
 
-header{
-  backdrop-filter:blur(12px);
-  background:rgba(0,0,0,.5);
-  border-bottom:1px solid var(--border);
-  position:sticky;top:0;z-index:10;
-}
+    <!-- Open Graph -->
+    <meta property="og:title" content="Termografía Industrial en Colombia">
+    <meta property="og:description" content="Especialistas en inspección eléctrica en Bogotá y mantenimiento predictivo industrial.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jhs68344.github.io/termografia-predictiva/">
 
-.nav{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:14px 0;
-}
+    <!-- Schema Profesional Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Termografía Predictiva",
+      "description": "Servicios de termografía industrial en Colombia e inspección eléctrica en Bogotá.",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Colombia"
+      },
+      "telephone": "+573168726521",
+      "url": "https://jhs68344.github.io/termografia-predictiva/"
+    }
+    </script>
 
-.brand{
-  display:flex;align-items:center;gap:12px;
-}
-.brand img{
-  width:42px;height:42px;border-radius:10px;
-}
-.brand strong{font-size:15px}
-.brand span{font-size:12px;color:var(--muted)}
-
-nav a{
-  color:var(--muted);
-  text-decoration:none;
-  margin-left:18px;
-  font-size:14px;
-}
-nav a:hover{color:white}
-
-.btn{
-  padding:10px 18px;
-  border-radius:14px;
-  font-weight:600;
-  border:1px solid var(--border);
-  text-decoration:none;
-  display:inline-block;
-}
-.btn.primary{
-  background:linear-gradient(135deg,var(--accent1),var(--accent2));
-  color:white;
-}
-
-.hero{
-  padding:60px 0;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
-  align-items:center;
-}
-
-.hero-image{
-  background:#000;
-  border-radius:var(--radius);
-  border:1px solid var(--border);
-  padding:20px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-.hero-image img{
-  max-width:100%;
-  height:auto;
-  object-fit:contain; /* EVITA RECORTE */
-}
-
-.hero-content h1{
-  font-size:42px;
-  line-height:1.1;
-  margin:0 0 15px;
-}
-.hero-content p{
-  color:var(--muted);
-  font-size:16px;
-}
-
-.section{
-  padding:70px 0;
-}
-
-.section h2{
-  margin-bottom:30px;
-  font-size:26px;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:25px;
-}
-
-.card{
-  background:var(--card);
-  border:1px solid var(--border);
-  padding:25px;
-  border-radius:var(--radius);
-}
-
-.card img{
-  width:100%;
-  height:auto;
-  object-fit:contain; /* MEJOR ENFOQUE */
-  background:#000;
-  border-radius:12px;
-  margin-bottom:15px;
-}
-
-.card h3{margin:0 0 10px;font-size:18px}
-.card p{color:var(--muted);font-size:14px}
-
-.process{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
-  align-items:center;
-}
-
-.process img{
-  width:100%;
-  height:auto;
-  object-fit:contain;
-  background:#000;
-  border-radius:var(--radius);
-  padding:15px;
-  border:1px solid var(--border);
-}
-
-.steps div{
-  background:var(--card);
-  padding:18px;
-  border-radius:14px;
-  border:1px solid var(--border);
-  margin-bottom:12px;
-}
-.steps strong{display:block;margin-bottom:5px}
-
-footer{
-  border-top:1px solid var(--border);
-  padding:30px 0;
-  text-align:center;
-  color:var(--muted);
-  font-size:13px;
-}
-
-@media(max-width:900px){
-  .hero,.process{grid-template-columns:1fr}
-  .hero-content h1{font-size:34px}
-}
-</style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
 <header>
-<div class="container nav">
-<div class="brand">
-<img src="logo-jhs-inspeccion-industrial.png" alt="Logo Termografía Predictiva">
-<div>
-<strong>Termografía Predictiva</strong><br>
-<span>Termografía eléctrica • Mantenimiento predictivo</span>
-</div>
-</div>
-
-<nav>
-<a href="#servicios">Servicios</a>
-<a href="#proceso">Proceso</a>
-<a href="#contacto">Contacto</a>
-<a href="#contacto" class="btn primary">Solicitar inspección</a>
-</nav>
-</div>
+    <h1>Termografía Industrial en Colombia – Inspección Eléctrica en Bogotá</h1>
+    <p>
+        Ofrecemos servicios especializados en termografía industrial en Colombia 
+        e inspección eléctrica en Bogotá para mantenimiento predictivo. 
+        Detectamos fallas antes de que se conviertan en problemas críticos.
+    </p>
 </header>
 
-<section class="container hero">
-<div class="hero-image">
-<img src="assets/img/termografia-electrica-industrial.jpg" alt="Termografía eléctrica industrial">
-</div>
-
-<div class="hero-content">
-<h1>Detecte puntos calientes antes de que se conviertan en fallas eléctricas</h1>
-<p>
-Inspección termográfica profesional para mantenimiento predictivo en tableros, transformadores y sistemas eléctricos industriales.
-</p>
-<br>
-<a href="#contacto" class="btn primary">Cotizar inspección</a>
-</div>
+<section>
+    <h2>Servicios de Inspección Termográfica</h2>
+    <p>
+        Realizamos inspecciones eléctricas y análisis térmico industrial 
+        para prevenir fallas, reducir riesgos y optimizar la eficiencia energética.
+    </p>
 </section>
 
-<section id="servicios" class="section container">
-<h2>Servicios de Termografía</h2>
-<div class="grid">
-
-<div class="card">
-<img src="assets/img/inspeccion-termografica-tablero.jpg" alt="Inspección termográfica tablero">
-<h3>Inspección de tableros eléctricos</h3>
-<p>Detección de conexiones flojas, sobrecargas y desbalances térmicos.</p>
-</div>
-
-<div class="card">
-<img src="assets/img/diagnostico-infrarrojo-panel.jpg" alt="Diagnóstico infrarrojo panel">
-<h3>Diagnóstico infrarrojo en panel</h3>
-<p>Identificación de puntos calientes críticos y priorización de mantenimiento.</p>
-</div>
-
-<div class="card">
-<img src="assets/img/analisis-termografico-transformador.jpg" alt="Análisis termográfico transformador">
-<h3>Análisis en transformadores</h3>
-<p>Evaluación térmica para prevenir fallas y pérdidas energéticas.</p>
-</div>
-
-</div>
+<section>
+    <h2>Mantenimiento Predictivo Industrial</h2>
+    <p>
+        Nuestro servicio de mantenimiento predictivo permite identificar 
+        puntos calientes, sobrecargas y conexiones defectuosas en sistemas eléctricos.
+    </p>
 </section>
 
-<section id="proceso" class="section container process">
-<img src="assets/img/mantenimiento-predictivo-electrico.jpg" alt="Mantenimiento predictivo eléctrico">
+<section>
+    <h2>Contáctanos</h2>
+    <p>Teléfono: +57 316 8726521</p>
 
-<div class="steps">
-<h2>Proceso de trabajo</h2>
-
-<div>
-<strong>1) Recolección de información</strong>
-Tipo de instalación, cargas y criticidad.
-</div>
-
-<div>
-<strong>2) Inspección termográfica</strong>
-Captura de imágenes térmicas y visibles.
-</div>
-
-<div>
-<strong>3) Análisis y priorización</strong>
-Clasificación por severidad.
-</div>
-
-<div>
-<strong>4) Entrega de reporte</strong>
-Informe técnico con evidencia y recomendaciones.
-</div>
-
-<a href="#contacto" class="btn primary" style="margin-top:10px;display:inline-block;">Agendar visita</a>
-</div>
-</section>
-
-<section id="contacto" class="section container">
-<h2>Contacto</h2>
-<p style="color:var(--muted)">
-Correo: contacto@tudominio.com<br>
-Teléfono: +57 3168726521
-</p>
+    <a href="https://wa.me/573168726521" target="_blank">
+        <button>Contactar por WhatsApp</button>
+    </a>
 </section>
 
 <footer>
-© 2026 Termografía Predictiva – Todos los derechos reservados.
+    <p>© 2024 Termografía Predictiva - Todos los derechos reservados</p>
 </footer>
 
 </body>
