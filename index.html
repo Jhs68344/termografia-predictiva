@@ -1,810 +1,288 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Termografía Predictiva | Termografía Eléctrica Industrial y Mantenimiento Predictivo</title>
-  <meta name="description" content="Servicio profesional de termografía eléctrica para mantenimiento predictivo: detección de puntos calientes, inspección de tableros, transformadores y subestaciones. Reporte técnico y recomendaciones." />
-  <meta name="keywords" content="termografía predictiva, termografía eléctrica, inspección termográfica, mantenimiento predictivo, puntos calientes eléctricos, cámara termográfica, diagnóstico infrarrojo, tableros eléctricos, transformadores" />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
+<title>Termografía Predictiva | Termografía Eléctrica Industrial</title>
+<meta name="description" content="Servicio profesional de termografía eléctrica para mantenimiento predictivo. Detección de puntos calientes en tableros, transformadores y sistemas industriales." />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://termografiapredictiva.github.io/" />
 
-  <!-- Cambia esta URL cuando actives GitHub Pages -->
-  <link rel="canonical" href="https://termografiapredictiva.github.io/" />
+<style>
+:root{
+  --bg:#071018;
+  --card:rgba(255,255,255,.05);
+  --border:rgba(255,255,255,.12);
+  --text:#f1f5f9;
+  --muted:#94a3b8;
+  --accent1:#ff7a18;
+  --accent2:#00d4ff;
+  --radius:18px;
+}
 
-  <!-- Open Graph -->
-  <meta property="og:locale" content="es_ES" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Termografía Predictiva | Termografía Eléctrica Industrial" />
-  <meta property="og:description" content="Inspección termográfica profesional para prevenir fallas eléctricas, paradas y riesgos. Reporte técnico y recomendaciones de mantenimiento." />
-  <meta property="og:url" content="https://termografiapredictiva.github.io/" />
-  <meta property="og:image" content="https://termografiapredictiva.github.io/assets/img/termografia-electrica-industrial.jpg" />
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto;
+  background:linear-gradient(180deg,#050c14,#0b1b2a);
+  color:var(--text);
+}
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Termografía Predictiva | Termografía Eléctrica Industrial" />
-  <meta name="twitter:description" content="Servicio profesional de termografía eléctrica para mantenimiento predictivo: tableros, transformadores y puntos calientes. Reporte técnico." />
-  <meta name="twitter:image" content="https://termografiapredictiva.github.io/assets/img/termografia-electrica-industrial.jpg" />
+.container{max-width:1200px;margin:auto;padding:0 20px}
 
-  <!-- Preload (mejora velocidad percibida) -->
-  <link rel="preload" as="image" href="assets/img/termografia-electrica-industrial.jpg" />
-  <link rel="preload" as="image" href="logo-jhs-inspeccion-industrial.png" />
+header{
+  backdrop-filter:blur(12px);
+  background:rgba(0,0,0,.5);
+  border-bottom:1px solid var(--border);
+  position:sticky;top:0;z-index:10;
+}
 
-  <!-- Favicon (si luego subes uno, cambia la ruta) -->
-  <!-- <link rel="icon" href="assets/img/favicon-termografia.png" /> -->
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 0;
+}
 
-  <style>
-    :root{
-      --bg: #0b1220;
-      --card: rgba(255,255,255,.06);
-      --card2: rgba(255,255,255,.08);
-      --text: rgba(255,255,255,.92);
-      --muted: rgba(255,255,255,.70);
-      --line: rgba(255,255,255,.12);
-      --accent: #ff7a18;
-      --accent2: #00d4ff;
-      --ok: #22c55e;
-      --shadow: 0 18px 60px rgba(0,0,0,.45);
-      --radius: 18px;
-      --max: 1120px;
-    }
+.brand{
+  display:flex;align-items:center;gap:12px;
+}
+.brand img{
+  width:42px;height:42px;border-radius:10px;
+}
+.brand strong{font-size:15px}
+.brand span{font-size:12px;color:var(--muted)}
 
-    *{ box-sizing: border-box; }
-    html,body{ height:100%; }
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      background: radial-gradient(1200px 700px at 15% 10%, rgba(0,212,255,.10), transparent 55%),
-                  radial-gradient(900px 600px at 85% 5%, rgba(255,122,24,.10), transparent 50%),
-                  linear-gradient(180deg, #070b14 0%, #0b1220 55%, #070b14 100%);
-      color: var(--text);
-      line-height: 1.55;
-    }
+nav a{
+  color:var(--muted);
+  text-decoration:none;
+  margin-left:18px;
+  font-size:14px;
+}
+nav a:hover{color:white}
 
-    a{ color: inherit; text-decoration: none; }
-    img{ max-width: 100%; display:block; }
+.btn{
+  padding:10px 18px;
+  border-radius:14px;
+  font-weight:600;
+  border:1px solid var(--border);
+  text-decoration:none;
+  display:inline-block;
+}
+.btn.primary{
+  background:linear-gradient(135deg,var(--accent1),var(--accent2));
+  color:white;
+}
 
-    .container{ max-width: var(--max); margin: 0 auto; padding: 0 18px; }
-    .pill{
-      display:inline-flex; gap:8px; align-items:center;
-      padding: 8px 12px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.04);
-      border-radius: 999px;
-      color: var(--muted);
-      font-size: 13px;
-    }
+.hero{
+  padding:60px 0;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  align-items:center;
+}
 
-    header{
-      position: sticky; top:0; z-index: 50;
-      backdrop-filter: blur(10px);
-      background: rgba(7,11,20,.60);
-      border-bottom: 1px solid var(--line);
-    }
+.hero-image{
+  background:#000;
+  border-radius:var(--radius);
+  border:1px solid var(--border);
+  padding:20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.hero-image img{
+  max-width:100%;
+  height:auto;
+  object-fit:contain; /* EVITA RECORTE */
+}
 
-    .nav{
-      display:flex; align-items:center; justify-content: space-between;
-      padding: 12px 0;
-      gap: 12px;
-    }
+.hero-content h1{
+  font-size:42px;
+  line-height:1.1;
+  margin:0 0 15px;
+}
+.hero-content p{
+  color:var(--muted);
+  font-size:16px;
+}
 
-    .brand{
-      display:flex; align-items:center; gap: 10px;
-      min-width: 220px;
-    }
+.section{
+  padding:70px 0;
+}
 
-    .brand img{
-      width: 40px; height: 40px; object-fit: contain;
-      border-radius: 10px;
-      background: rgba(255,255,255,.06);
-      padding: 6px;
-      border: 1px solid var(--line);
-    }
+.section h2{
+  margin-bottom:30px;
+  font-size:26px;
+}
 
-    .brand .name{
-      display:flex; flex-direction: column; line-height:1.1;
-    }
-    .brand .name strong{ font-size: 14px; letter-spacing: .2px; }
-    .brand .name span{ font-size: 12px; color: var(--muted); }
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
 
-    nav ul{
-      list-style:none; margin:0; padding:0;
-      display:flex; gap: 14px; align-items:center;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-    nav a{
-      font-size: 13px;
-      color: var(--muted);
-      padding: 8px 10px;
-      border-radius: 10px;
-      border: 1px solid transparent;
-    }
-    nav a:hover{
-      color: var(--text);
-      background: rgba(255,255,255,.04);
-      border-color: var(--line);
-    }
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  padding:25px;
+  border-radius:var(--radius);
+}
 
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      gap: 10px;
-      padding: 12px 14px;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.05);
-      color: var(--text);
-      font-weight: 600;
-      font-size: 14px;
-      transition: transform .12s ease, background .12s ease, border-color .12s ease;
-      cursor: pointer;
-      white-space: nowrap;
-    }
-    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.18); }
-    .btn.primary{
-      background: linear-gradient(135deg, rgba(255,122,24,.95), rgba(0,212,255,.65));
-      border-color: rgba(255,255,255,.22);
-      box-shadow: 0 18px 40px rgba(255,122,24,.10);
-    }
-    .btn.primary:hover{ filter: brightness(1.02); }
+.card img{
+  width:100%;
+  height:auto;
+  object-fit:contain; /* MEJOR ENFOQUE */
+  background:#000;
+  border-radius:12px;
+  margin-bottom:15px;
+}
 
-    .hero{
-      padding: 56px 0 22px;
-    }
+.card h3{margin:0 0 10px;font-size:18px}
+.card p{color:var(--muted);font-size:14px}
 
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.08fr .92fr;
-      gap: 22px;
-      align-items: stretch;
-    }
+.process{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
 
-    .hero-card{
-      border-radius: calc(var(--radius) + 8px);
-      overflow:hidden;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      box-shadow: var(--shadow);
-      position: relative;
-      min-height: 420px;
-    }
+.process img{
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  background:#000;
+  border-radius:var(--radius);
+  padding:15px;
+  border:1px solid var(--border);
+}
 
-    .hero-card .bg{
-      position:absolute; inset:0;
-      background:
-        linear-gradient(120deg, rgba(7,11,20,.65), rgba(7,11,20,.25) 55%, rgba(7,11,20,.75)),
-        url("assets/img/termografia-electrica-industrial.jpg") center/cover no-repeat;
-      transform: scale(1.02);
-      filter: saturate(1.05) contrast(1.05);
-    }
+.steps div{
+  background:var(--card);
+  padding:18px;
+  border-radius:14px;
+  border:1px solid var(--border);
+  margin-bottom:12px;
+}
+.steps strong{display:block;margin-bottom:5px}
 
-    .hero-card .content{
-      position: relative;
-      padding: 28px;
-      display:flex;
-      flex-direction: column;
-      gap: 14px;
-      height: 100%;
-      justify-content: center;
-    }
+footer{
+  border-top:1px solid var(--border);
+  padding:30px 0;
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+}
 
-    h1{
-      margin: 0;
-      font-size: 40px;
-      letter-spacing: -0.5px;
-      line-height: 1.08;
-    }
-
-    .lead{
-      margin: 0;
-      color: var(--muted);
-      font-size: 16px;
-      max-width: 58ch;
-    }
-
-    .hero-actions{
-      display:flex; gap: 12px; flex-wrap: wrap;
-      margin-top: 8px;
-    }
-
-    .stats{
-      display:grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 10px;
-      margin-top: 14px;
-    }
-
-    .stat{
-      padding: 12px;
-      border-radius: 16px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.05);
-    }
-    .stat strong{ display:block; font-size: 14px; }
-    .stat span{ display:block; font-size: 12px; color: var(--muted); margin-top: 2px; }
-
-    .side{
-      display:flex; flex-direction: column; gap: 14px;
-    }
-
-    .side-card{
-      border-radius: calc(var(--radius) + 6px);
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-
-    .side-card .top{
-      padding: 18px 18px 10px;
-      display:flex; align-items:flex-start; justify-content: space-between; gap: 12px;
-    }
-
-    .side-card h2{
-      margin: 0;
-      font-size: 16px;
-      letter-spacing: -0.2px;
-    }
-
-    .side-card p{
-      margin: 8px 0 0;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .thumb{
-      height: 150px;
-      background: center/cover no-repeat;
-      border-top: 1px solid var(--line);
-    }
-
-    section{ padding: 40px 0; }
-    .section-title{
-      display:flex; align-items:flex-end; justify-content: space-between;
-      gap: 16px; margin-bottom: 14px;
-    }
-    .section-title h3{ margin:0; font-size: 22px; letter-spacing: -0.2px; }
-    .section-title p{ margin:0; color: var(--muted); font-size: 13px; max-width: 70ch; }
-
-    .grid-3{
-      display:grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 14px;
-    }
-
-    .card{
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.04);
-      padding: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.22);
-    }
-
-    .card .icon{
-      width: 44px; height: 44px;
-      border-radius: 14px;
-      display:grid; place-items:center;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.05);
-      margin-bottom: 10px;
-    }
-    .card h4{ margin: 0; font-size: 15px; }
-    .card p{ margin: 6px 0 0; color: var(--muted); font-size: 13px; }
-
-    .split{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      align-items: stretch;
-    }
-
-    .media{
-      border-radius: var(--radius);
-      overflow:hidden;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      box-shadow: var(--shadow);
-    }
-    .media img{ width:100%; height: 100%; object-fit: cover; min-height: 320px; }
-
-    .list{
-      display:flex; flex-direction: column; gap: 10px;
-    }
-
-    .li{
-      padding: 12px 14px;
-      border-radius: 16px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.04);
-      display:flex; gap: 10px; align-items:flex-start;
-    }
-    .dot{
-      width: 10px; height: 10px; border-radius: 999px;
-      margin-top: 6px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      box-shadow: 0 8px 20px rgba(255,122,24,.12);
-      flex: 0 0 auto;
-    }
-    .li strong{ display:block; font-size: 14px; }
-    .li span{ display:block; font-size: 13px; color: var(--muted); margin-top: 2px; }
-
-    .gallery{
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 14px;
-    }
-    .g1{ grid-column: span 7; }
-    .g2{ grid-column: span 5; }
-    .g3{ grid-column: span 5; }
-    .g4{ grid-column: span 7; }
-
-    .gitem{
-      border-radius: var(--radius);
-      overflow:hidden;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      box-shadow: var(--shadow);
-      position: relative;
-      min-height: 220px;
-    }
-    .gitem img{ width:100%; height:100%; object-fit: cover; }
-    .badge{
-      position:absolute; left: 14px; top: 14px;
-      padding: 8px 10px;
-      border-radius: 999px;
-      background: rgba(7,11,20,.72);
-      border: 1px solid rgba(255,255,255,.16);
-      font-size: 12px;
-      color: rgba(255,255,255,.85);
-      backdrop-filter: blur(8px);
-    }
-
-    .cta{
-      border-radius: calc(var(--radius) + 10px);
-      border: 1px solid rgba(255,255,255,.16);
-      background:
-        radial-gradient(900px 420px at 15% 10%, rgba(0,212,255,.20), transparent 55%),
-        radial-gradient(900px 420px at 85% 0%, rgba(255,122,24,.18), transparent 55%),
-        rgba(255,255,255,.04);
-      box-shadow: var(--shadow);
-      padding: 20px;
-      display:flex; gap: 14px; align-items:center; justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    .cta h3{ margin:0; font-size: 18px; }
-    .cta p{ margin:6px 0 0; color: var(--muted); font-size: 13px; }
-
-    .contact{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      align-items: start;
-    }
-
-    .form label{ display:block; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
-    .form input, .form textarea{
-      width:100%;
-      padding: 12px 12px;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      color: var(--text);
-      outline: none;
-      font-size: 14px;
-    }
-    .form textarea{ min-height: 120px; resize: vertical; }
-    .form .row{ display:grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    .form .actions{ margin-top: 10px; display:flex; gap: 10px; flex-wrap: wrap; }
-
-    footer{
-      padding: 26px 0 40px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 13px;
-    }
-    .foot{
-      display:flex; gap: 12px; justify-content: space-between; flex-wrap: wrap;
-      align-items:center;
-    }
-
-    /* Responsive */
-    @media (max-width: 980px){
-      .hero-grid{ grid-template-columns: 1fr; }
-      .grid-3{ grid-template-columns: 1fr; }
-      .split{ grid-template-columns: 1fr; }
-      .contact{ grid-template-columns: 1fr; }
-      .gallery{ grid-template-columns: 1fr; }
-      .g1,.g2,.g3,.g4{ grid-column: span 12; }
-      h1{ font-size: 34px; }
-      .stats{ grid-template-columns: 1fr; }
-      nav ul{ justify-content: flex-start; }
-      .brand{ min-width: unset; }
-    }
-  </style>
-
-  <!-- Schema.org (ajusta teléfono, ciudad, email y URL real cuando actives Pages) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Termografía Predictiva",
-    "image": "https://termografiapredictiva.github.io/assets/img/termografia-electrica-industrial.jpg",
-    "url": "https://termografiapredictiva.github.io/",
-    "description": "Servicio profesional de termografía eléctrica para mantenimiento predictivo: inspección termográfica de tableros, transformadores y diagnóstico de puntos calientes. Reporte técnico.",
-    "areaServed": "CO",
-    "makesOffer": [{
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Inspección termográfica eléctrica",
-        "serviceType": "Termografía eléctrica"
-      }
-    }]
-  }
-  </script>
+@media(max-width:900px){
+  .hero,.process{grid-template-columns:1fr}
+  .hero-content h1{font-size:34px}
+}
+</style>
 </head>
 
 <body>
-  <header>
-    <div class="container">
-      <div class="nav">
-        <a class="brand" href="#inicio" aria-label="Ir al inicio">
-          <img src="logo-jhs-inspeccion-industrial.png" alt="Logo Termografía Predictiva" width="40" height="40" loading="eager" />
-          <div class="name">
-            <strong>Termografía Predictiva</strong>
-            <span>Termografía eléctrica • Mantenimiento predictivo</span>
-          </div>
-        </a>
 
-        <nav aria-label="Navegación principal">
-          <ul>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#proceso">Proceso</a></li>
-            <li><a href="#evidencia">Evidencia</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <li><a class="btn primary" href="#contacto">Solicitar inspección</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+<header>
+<div class="container nav">
+<div class="brand">
+<img src="logo-jhs-inspeccion-industrial.png" alt="Logo Termografía Predictiva">
+<div>
+<strong>Termografía Predictiva</strong><br>
+<span>Termografía eléctrica • Mantenimiento predictivo</span>
+</div>
+</div>
 
-  <main id="inicio" class="hero">
-    <div class="container">
-      <div class="hero-grid">
-        <section class="hero-card" aria-label="Presentación principal">
-          <div class="bg" role="img" aria-label="Termografía eléctrica industrial en tablero eléctrico"></div>
-          <div class="content">
-            <span class="pill">
-              <span aria-hidden="true">🔥</span>
-              Prevención de fallas • Reporte técnico • Recomendaciones
-            </span>
+<nav>
+<a href="#servicios">Servicios</a>
+<a href="#proceso">Proceso</a>
+<a href="#contacto">Contacto</a>
+<a href="#contacto" class="btn primary">Solicitar inspección</a>
+</nav>
+</div>
+</header>
 
-            <h1>Detecte puntos calientes antes de que se conviertan en fallas eléctricas.</h1>
-            <p class="lead">
-              Inspección termográfica profesional para <strong>mantenimiento predictivo</strong> en entornos industriales:
-              tableros, transformadores y circuitos críticos. Resultados claros y accionables.
-            </p>
+<section class="container hero">
+<div class="hero-image">
+<img src="assets/img/termografia-electrica-industrial.jpg" alt="Termografía eléctrica industrial">
+</div>
 
-            <div class="hero-actions">
-              <a class="btn primary" href="#contacto">Cotizar inspección</a>
-              <a class="btn" href="#servicios">Ver servicios</a>
-            </div>
+<div class="hero-content">
+<h1>Detecte puntos calientes antes de que se conviertan en fallas eléctricas</h1>
+<p>
+Inspección termográfica profesional para mantenimiento predictivo en tableros, transformadores y sistemas eléctricos industriales.
+</p>
+<br>
+<a href="#contacto" class="btn primary">Cotizar inspección</a>
+</div>
+</section>
 
-            <div class="stats" aria-label="Indicadores clave">
-              <div class="stat">
-                <strong>Detección temprana</strong>
-                <span>Identifique anomalías térmicas sin detener operación.</span>
-              </div>
-              <div class="stat">
-                <strong>Reporte profesional</strong>
-                <span>Hallazgos, fotos térmicas y recomendaciones prácticas.</span>
-              </div>
-              <div class="stat">
-                <strong>Reducción de riesgo</strong>
-                <span>Menos paradas, menos daños, más seguridad.</span>
-              </div>
-            </div>
-          </div>
-        </section>
+<section id="servicios" class="section container">
+<h2>Servicios de Termografía</h2>
+<div class="grid">
 
-        <aside class="side" aria-label="Tarjetas destacadas">
-          <div class="side-card">
-            <div class="top">
-              <div>
-                <h2>Inspección de tableros eléctricos</h2>
-                <p>Encuentre sobrecalentamientos por carga, conexiones flojas y desequilibrios.</p>
-              </div>
-              <span class="pill">Tableros</span>
-            </div>
-            <div class="thumb" style="background-image:url('assets/img/inspeccion-termografica-tablero.jpg');" role="img" aria-label="Inspección termográfica en tablero"></div>
-          </div>
+<div class="card">
+<img src="assets/img/inspeccion-termografica-tablero.jpg" alt="Inspección termográfica tablero">
+<h3>Inspección de tableros eléctricos</h3>
+<p>Detección de conexiones flojas, sobrecargas y desbalances térmicos.</p>
+</div>
 
-          <div class="side-card">
-            <div class="top">
-              <div>
-                <h2>Diagnóstico infrarrojo en panel</h2>
-                <p>Valide condiciones críticas y priorice mantenimiento por severidad.</p>
-              </div>
-              <span class="pill">Diagnóstico</span>
-            </div>
-            <div class="thumb" style="background-image:url('assets/img/diagnostico-infrarrojo-panel.jpg');" role="img" aria-label="Diagnóstico infrarrojo en panel eléctrico"></div>
-          </div>
-        </aside>
-      </div>
-    </div>
-  </main>
+<div class="card">
+<img src="assets/img/diagnostico-infrarrojo-panel.jpg" alt="Diagnóstico infrarrojo panel">
+<h3>Diagnóstico infrarrojo en panel</h3>
+<p>Identificación de puntos calientes críticos y priorización de mantenimiento.</p>
+</div>
 
-  <section id="servicios">
-    <div class="container">
-      <div class="section-title">
-        <div>
-          <h3>Servicios</h3>
-          <p>Soluciones enfocadas en mantenimiento predictivo con termografía eléctrica, priorizando seguridad, continuidad operativa y decisiones basadas en evidencia.</p>
-        </div>
-        <span class="pill">Termografía • Predictivo • Industrial</span>
-      </div>
+<div class="card">
+<img src="assets/img/analisis-termografico-transformador.jpg" alt="Análisis termográfico transformador">
+<h3>Análisis en transformadores</h3>
+<p>Evaluación térmica para prevenir fallas y pérdidas energéticas.</p>
+</div>
 
-      <div class="grid-3">
-        <article class="card">
-          <div class="icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-              <path d="M12 2l2.2 5.6L20 10l-5.8 2.4L12 18l-2.2-5.6L4 10l5.8-2.4L12 2z" stroke="currentColor" stroke-width="1.6"/>
-            </svg>
-          </div>
-          <h4>Termografía en tableros y celdas</h4>
-          <p>Detección de puntos calientes, conexiones defectuosas, cargas desbalanceadas y componentes en riesgo.</p>
-        </article>
+</div>
+</section>
 
-        <article class="card">
-          <div class="icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-              <path d="M4 12h16M7 7h10M7 17h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h4>Mantenimiento predictivo</h4>
-          <p>Planifique paradas y correctivos por criticidad térmica: menos improvisación y más control.</p>
-        </article>
+<section id="proceso" class="section container process">
+<img src="assets/img/mantenimiento-predictivo-electrico.jpg" alt="Mantenimiento predictivo eléctrico">
 
-        <article class="card">
-          <div class="icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-              <path d="M7 21h10a3 3 0 0 0 3-3V7l-4-4H7a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3z" stroke="currentColor" stroke-width="1.6"/>
-              <path d="M16 3v5h5" stroke="currentColor" stroke-width="1.6"/>
-            </svg>
-          </div>
-          <h4>Reporte técnico profesional</h4>
-          <p>Informe con evidencia fotográfica, temperatura, severidad, ubicación y recomendaciones.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+<div class="steps">
+<h2>Proceso de trabajo</h2>
 
-  <section id="proceso">
-    <div class="container">
-      <div class="split">
-        <div class="media" aria-label="Imagen del servicio">
-          <img src="assets/img/mantenimiento-predictivo-electrico.jpg" alt="Mantenimiento predictivo eléctrico con termografía" loading="lazy" />
-        </div>
+<div>
+<strong>1) Recolección de información</strong>
+Tipo de instalación, cargas y criticidad.
+</div>
 
-        <div class="card">
-          <div class="section-title" style="margin-bottom:10px;">
-            <div>
-              <h3 style="margin:0;">Proceso de trabajo</h3>
-              <p>Así garantizamos un resultado claro, verificable y útil para tomar decisiones.</p>
-            </div>
-          </div>
+<div>
+<strong>2) Inspección termográfica</strong>
+Captura de imágenes térmicas y visibles.
+</div>
 
-          <div class="list" role="list">
-            <div class="li" role="listitem">
-              <span class="dot" aria-hidden="true"></span>
-              <div>
-                <strong>1) Recolección de información</strong>
-                <span>Tipo de instalación, criticidad, cargas, horarios y zonas de mayor riesgo.</span>
-              </div>
-            </div>
+<div>
+<strong>3) Análisis y priorización</strong>
+Clasificación por severidad.
+</div>
 
-            <div class="li" role="listitem">
-              <span class="dot" aria-hidden="true"></span>
-              <div>
-                <strong>2) Inspección termográfica</strong>
-                <span>Captura de imágenes térmicas y visibles en tableros, conexiones, equipos y transformadores.</span>
-              </div>
-            </div>
+<div>
+<strong>4) Entrega de reporte</strong>
+Informe técnico con evidencia y recomendaciones.
+</div>
 
-            <div class="li" role="listitem">
-              <span class="dot" aria-hidden="true"></span>
-              <div>
-                <strong>3) Análisis y priorización</strong>
-                <span>Clasificación por severidad para definir acciones inmediatas y plan de mantenimiento.</span>
-              </div>
-            </div>
+<a href="#contacto" class="btn primary" style="margin-top:10px;display:inline-block;">Agendar visita</a>
+</div>
+</section>
 
-            <div class="li" role="listitem">
-              <span class="dot" aria-hidden="true"></span>
-              <div>
-                <strong>4) Entrega de reporte</strong>
-                <span>Resultados, hallazgos, ubicación, evidencia fotográfica y recomendaciones.</span>
-              </div>
-            </div>
-          </div>
+<section id="contacto" class="section container">
+<h2>Contacto</h2>
+<p style="color:var(--muted)">
+Correo: contacto@tudominio.com<br>
+Teléfono: +57 000 000 0000
+</p>
+</section>
 
-          <div class="hero-actions" style="margin-top: 12px;">
-            <a class="btn primary" href="#contacto">Agendar visita</a>
-            <a class="btn" href="#evidencia">Ver evidencia</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<footer>
+© 2026 Termografía Predictiva – Todos los derechos reservados.
+</footer>
 
-  <section id="evidencia">
-    <div class="container">
-      <div class="section-title">
-        <div>
-          <h3>Evidencia de inspección</h3>
-          <p>Imágenes representativas que soportan diagnósticos térmicos y priorización de acciones correctivas.</p>
-        </div>
-        <span class="pill">Evidencia • Trazabilidad</span>
-      </div>
-
-      <div class="gallery" aria-label="Galería de termografía">
-        <figure class="gitem g1">
-          <span class="badge">Industrial</span>
-          <img src="assets/img/termografia-electrica-industrial.jpg" alt="Termografía eléctrica industrial en tablero" loading="lazy" />
-        </figure>
-
-        <figure class="gitem g2">
-          <span class="badge">Transformador</span>
-          <img src="assets/img/analisis-termografico-transformador.jpg" alt="Análisis termográfico en transformador" loading="lazy" />
-        </figure>
-
-        <figure class="gitem g3">
-          <span class="badge">Panel</span>
-          <img src="assets/img/diagnostico-infrarrojo-panel.jpg" alt="Diagnóstico infrarrojo en panel eléctrico" loading="lazy" />
-        </figure>
-
-        <figure class="gitem g4">
-          <span class="badge">Tablero</span>
-          <img src="assets/img/inspeccion-termografica-tablero.jpg" alt="Inspección termográfica de tablero eléctrico" loading="lazy" />
-        </figure>
-      </div>
-
-      <div style="height: 14px;"></div>
-
-      <div class="cta" role="region" aria-label="Llamado a la acción">
-        <div>
-          <h3>¿Quieres reducir paradas y riesgos eléctricos?</h3>
-          <p>Con una inspección termográfica puedes detectar fallas antes de que ocurran. Te entregamos evidencia y un plan de acción claro.</p>
-        </div>
-        <div class="hero-actions">
-          <a class="btn primary" href="#contacto">Solicitar cotización</a>
-          <a class="btn" href="#faq">Resolver dudas</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="faq">
-    <div class="container">
-      <div class="section-title">
-        <div>
-          <h3>Preguntas frecuentes</h3>
-          <p>Respuestas rápidas para entender el valor de la termografía predictiva en instalaciones eléctricas.</p>
-        </div>
-        <span class="pill">FAQ</span>
-      </div>
-
-      <div class="grid-3">
-        <div class="card">
-          <h4>¿Qué detecta la termografía eléctrica?</h4>
-          <p>Sobrecalentamientos por conexiones flojas, carga excesiva, desbalance, componentes deteriorados y pérdidas de eficiencia.</p>
-        </div>
-        <div class="card">
-          <h4>¿Se puede hacer sin detener operación?</h4>
-          <p>Normalmente sí, siempre que existan condiciones seguras de inspección y acceso controlado.</p>
-        </div>
-        <div class="card">
-          <h4>¿Qué incluye el reporte?</h4>
-          <p>Imágenes térmicas/visibles, temperatura, ubicación, severidad, diagnóstico y recomendaciones para corregir.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contacto">
-    <div class="container">
-      <div class="section-title">
-        <div>
-          <h3>Contacto</h3>
-          <p>Déjanos tus datos y te respondemos con una propuesta. (Puedes personalizar teléfono, ciudad y correo en este HTML.)</p>
-        </div>
-        <span class="pill">Cotización • Agendamiento</span>
-      </div>
-
-      <div class="contact">
-        <div class="card">
-          <h4 style="margin-top:0;">Datos</h4>
-          <p style="margin:6px 0 0; color: var(--muted);">
-            <strong>Empresa:</strong> Termografía Predictiva<br/>
-            <strong>Correo:</strong> <a href="mailto:contacto@tudominio.com">contacto@tudominio.com</a><br/>
-            <strong>Tel/WhatsApp:</strong> <a href="https://wa.me/0000000000" target="_blank" rel="noopener">+57 000 000 0000</a><br/>
-            <strong>Ciudad:</strong> (configurar)<br/>
-          </p>
-
-          <div style="height: 12px;"></div>
-          <div class="media" style="min-height: 220px;">
-            <img src="assets/img/mantenimiento-predictivo-electrico.jpg" alt="Servicio de termografía para mantenimiento predictivo eléctrico" loading="lazy">
-          </div>
-        </div>
-
-        <div class="card form">
-          <h4 style="margin-top:0;">Solicitar inspección</h4>
-          <p style="margin:6px 0 10px; color: var(--muted); font-size: 13px;">
-            Este formulario usa <strong>mailto</strong>. Si prefieres, lo cambiamos luego por un formulario real (Google Forms / Formspree).
-          </p>
-
-          <form action="mailto:contacto@tudominio.com" method="post" enctype="text/plain">
-            <div class="row">
-              <div>
-                <label for="nombre">Nombre</label>
-                <input id="nombre" name="Nombre" type="text" placeholder="Tu nombre" required>
-              </div>
-              <div>
-                <label for="empresa">Empresa</label>
-                <input id="empresa" name="Empresa" type="text" placeholder="Empresa (opcional)">
-              </div>
-            </div>
-
-            <div style="height:10px;"></div>
-
-            <div class="row">
-              <div>
-                <label for="email">Email</label>
-                <input id="email" name="Email" type="email" placeholder="tu@email.com" required>
-              </div>
-              <div>
-                <label for="telefono">Teléfono</label>
-                <input id="telefono" name="Telefono" type="tel" placeholder="+57 ..." required>
-              </div>
-            </div>
-
-            <div style="height:10px;"></div>
-
-            <div>
-              <label for="mensaje">Mensaje</label>
-              <textarea id="mensaje" name="Mensaje" placeholder="Cuéntanos qué necesitas (tableros, transformador, subestación, etc.)" required></textarea>
-            </div>
-
-            <div class="actions">
-              <button class="btn primary" type="submit">Enviar solicitud</button>
-              <a class="btn" href="#inicio">Volver arriba</a>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <div class="foot">
-        <div>
-          © <span id="y"></span> Termografía Predictiva. Todos los derechos reservados.
-        </div>
-        <div style="display:flex; gap:10px; flex-wrap: wrap;">
-          <a href="robots.txt">robots.txt</a>
-          <span aria-hidden="true">•</span>
-          <a href="sitemap.xml">sitemap.xml</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
-
